@@ -3,13 +3,12 @@
 import { motion } from 'framer-motion';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
+import styles from '../styles';
+import { navVariants } from '../utils/motion';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
-import styles from '../styles';
-import { navVariants } from '../utils/motion';
-
 const Navbar = () => (
   <motion.nav
     variants={navVariants}
@@ -26,10 +25,10 @@ const Navbar = () => (
         alt="search"
         className="w-[24px] h-[24px] object-contain"
       />
-      <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
-       Ai-CodeLabs
-      </h2> 
-      <Menu as="div" className="relative inline-block text-left">
+       <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
+          Ai-CodeLabs
+       </h2>
+       <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button className=" object-contains inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
         <img
@@ -108,13 +107,7 @@ const Navbar = () => (
           </div>
         </Menu.Items>
       </Transition>
-    </Menu>
-
-
-
-
-
-     
+    </Menu>     
     </div>
   </motion.nav>
 );
